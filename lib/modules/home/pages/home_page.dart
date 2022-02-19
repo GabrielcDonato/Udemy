@@ -24,22 +24,51 @@ class HomePage extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         color: const Color(0xFF000000),
         child: Column(
-          children: const [
-            Text(
-              'data',
-              style: TextStyle(color: Colors.white),
-            ),
-            Text(
-              'data',
-              style: TextStyle(color: Colors.white),
-            ),
-            Text(
-              'data',
-              style: TextStyle(color: Colors.white),
-            ),
-            Text(
-              'data',
-              style: TextStyle(color: Colors.white),
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+                height: MediaQuery.of(context).size.height / 3.5,
+                width: MediaQuery.of(context).size.width,
+                color: Colors.white),
+            SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'Learning that fits',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 42,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Skills for your present (and future)',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Featured',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
