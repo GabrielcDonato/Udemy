@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'modules/home/pages/home_page.dart';
-import 'modules/splash/pages/splash_page.dart';
+import 'modules/splash/splash.dart';
+import 'modules/home/home.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -10,9 +10,11 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      initialRoute: '/splash_page',
+      debugShowCheckedModeBanner: false,
       routes: {
-        '/home_page': (route) => const HomePage(),
         '/splash_page': (route) => const SplashPage(),
+        '/home_page': (route) => const HomePage(),
       },
     );
   }
